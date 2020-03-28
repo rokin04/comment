@@ -12,10 +12,10 @@ const App = props => {
 
   useEffect(() => {
     // setLoading(true);
-    fetch("comments.json")
+    fetch("http://demo8708122.mockable.io")
       .then(resp => resp.json())
       .then(res => {
-        console.log("here");
+        console.log("here", res);
         setComments(res);
         setLoading(true);
       })
@@ -26,7 +26,7 @@ const App = props => {
 
     console.log(comments);
     // get all the comments
-  }, []);
+  }, [comments]);
 
   /**.
    * Add new comment
